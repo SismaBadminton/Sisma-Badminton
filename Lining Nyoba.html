@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Li-Ning Collection | SISMA Badminton</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style 1.css">
+    
+    <style>
+        .product-card-bs {
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+        .product-card-bs:hover { transform: translateY(-8px); }
+        .card-img-top { height: 180px; object-fit: contain; padding: 20px; }
+        .section-title { 
+            text-align: center; 
+            font-weight: 800; 
+            margin: 60px 0 30px; 
+            text-transform: uppercase; 
+            color: #333; 
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #ff0000; /* Warna khas Li-Ning */
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        .price { color: #e63946; font-weight: bold; }
+        #cart-count { font-size: 0.75rem; }
+        .category-section { padding-bottom: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="img/Tangkapan Layar 2026-05-12 pukul 11.37.52.png" alt="Logo" style="height: 40px; margin-right: 10px; border-radius: 5px;">
+            <span>SISMA Badminton</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#raket">Raket</a></li>
+            <li><a href="#sepatu">Sepatu</a></li>
+            <li><a href="#lainnya">Lainnya</a></li>
+            <li><a href="javascript:void(0)" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i> <span id="cart-count" class="badge bg-danger rounded-pill">0</span>
+            </a></li>
+        </ul>
+    </header>
+
+    <section class="brand-banner" style="background-color: #000; color: #ff0000; text-align: center; padding: 60px 5%; border-bottom: 5px solid #ff0000;">
+        <h1 class="display-4 fw-bold text-white">LI-NING <span style="color: #ff0000;">STADIUM</span></h1>
+        <p class="lead text-white-50">Anything is Possible - Temukan Kekuatanmu</p>
+    </section>
+
+    <div class="container mb-5">
+        
+        <section id="raket" class="category-section">
+            <h2 class="section-title">Koleksi Raket Li-Ning</h2>
+            <div class="row g-4">
+                
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 09.51.08.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Halbertec 8000</h6>
+                            <p class="price">Rp 3.704.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Halbertec 8000', 3704000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 09.51.43.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Halbertec 6000</h6>
+                            <p class="price">Rp 2.199.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Halbertec 6000', 2199000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 09.52.14.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Windstorm Nano 74</h6>
+                            <p class="price">Rp 1.299.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Windstorm Nano 74', 1299000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 09.53.52.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Windstorm 72</h6>
+                            <p class="price">Rp 1.558.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Windstorm 72', 1558000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 09.54.28.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Axforce 30 Extra Strong</h6>
+                            <p class="price">Rp 899.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Axforce 30', 899000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 09.56.01.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Aeronaut 9000 Super</h6>
+                            <p class="price">Rp 289.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Aeronaut 9000 Super', 289000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 09.56.17.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">3D Calibar 900 Instinct</h6>
+                            <p class="price">Rp 3.500.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('3D Calibar 900 Instinct', 3500000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 09.56.39.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">BladeX 900</h6>
+                            <p class="price">Rp 2.900.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning BladeX 900', 2900000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 09.56.58.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Axforce 100</h6>
+                            <p class="price">Rp 3.800.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Axforce 100', 3800000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 09.57.17.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Tectonic 7</h6>
+                            <p class="price">Rp 1.750.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Tectonic 7', 1750000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 09.57.44.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Turbo Charging 75C</h6>
+                            <p class="price">Rp 2.100.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Turbo Charging 75C', 2100000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 09.58.29.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">G-Force 5900 Superlite</h6>
+                            <p class="price">Rp 699.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('G-Force 5900 Superlite', 699000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="sepatu" class="category-section">
+            <h2 class="section-title">Koleksi Sepatu Li-Ning</h2>
+            <div class="row g-4">
+                
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 10.18.56.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Li-Ning Hypersonic</h6>
+                            <p class="price">Rp 699.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Hypersonic', 699000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 10.19.23.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Ranger Lite II SE</h6>
+                            <p class="price">Rp 1.499.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Ranger Lite II SE', 1499000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 10.19.42.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Li-Ning Aero Speed</h6>
+                            <p class="price">Rp 428.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Aero Speed', 428000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 10.20.06.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Ultra Max AYTS081-2</h6>
+                            <p class="price">Rp 565.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Ultra Max', 565000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 10.20.30.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Ultra Speed White</h6>
+                            <p class="price">Rp 583.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Ultra Speed', 583000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 10.20.58.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Li-Ning Mirage Pro</h6>
+                            <p class="price">Rp 1.850.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Mirage Pro', 1850000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 10.21.15.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Li-Ning Thunder Court</h6>
+                            <p class="price">Rp 1.250.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Thunder Court', 1250000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 10.21.57.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Li-Ning Saga Lite 7</h6>
+                            <p class="price">Rp 950.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Saga Lite 7', 950000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="lainnya" class="category-section">
+            <h2 class="section-title">Tas & Senar</h2>
+            <div class="row g-4 p-4 rounded" style="background-color: #f8f9fa; border: 1px solid #ddd;">
+                
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center shadow-sm">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 10.41.14.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Li-Ning Bag 6 in 1</h6>
+                            <p class="price">Rp 610.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Bag 6 in 1 ABDU313', 610000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center shadow-sm">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 10.41.59.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Racket Bag ABDT359</h6>
+                            <p class="price">Rp 399.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Bag ABDT359', 399000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center shadow-sm">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 10.42.19.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Square Bag Dolph Kit</h6>
+                            <p class="price">Rp 860.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Square Bag ABDU309', 860000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center shadow-sm">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 10.42.40.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">6 in 1 Bag ABDS667</h6>
+                            <p class="price">Rp 699.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Bag ABDS667', 699000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center shadow-sm">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 10.43.13.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Lining ABDS835</h6>
+                            <p class="price">Rp 279.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Lining ABDS835', 279000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center shadow-sm">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 10.44.26.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Li-Ning Pro Tournament Bag (6pcs) ABJU013-2 White</h6>
+                            <p class="price">Rp 2.442.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning Pro Tournament Bag (6pcs) ABJU013-2 White', 2442000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center shadow-sm">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 10.59.19.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Li-Ning No.3 Boost</h6>
+                            <p class="price">Rp 102.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning No.3 Boost', 102000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center shadow-sm">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 11.08.05.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Li-Ning N65 Single</h6>
+                            <p class="price">Rp 191.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning N65 Single', 191000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center shadow-sm">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 11.08.28.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Li-Ning String N58</h6>
+                            <p class="price">Rp 159.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning String N58', 159000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 product-card-bs text-center shadow-sm">
+                        <img src="img/Tangkapan Layar 2026-05-12 pukul 11.08.55.png" class="card-img-top">
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="fw-bold">Li-Ning No.1 String</h6>
+                            <p class="price">Rp 210.000</p>
+                            <button class="btn btn-dark mt-auto" onclick="addToCart('Li-Ning No.1 String', 210000)">Tambah</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content shadow-lg p-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="m-0 fw-bold">Checkout</h3>
+                <span class="btn-close" onclick="toggleCart()" style="cursor:pointer"></span>
+            </div>
+            
+            <div id="cart-items" class="mb-3 border-bottom pb-3" style="max-height: 200px; overflow-y: auto;"></div>
+
+            <div class="user-data mb-3">
+                <label class="form-label small fw-bold">Nama Penerima</label>
+                <input type="text" id="cust-name" class="form-control form-control-sm mb-2" placeholder="Nama Lengkap">
+                
+                <label class="form-label small fw-bold">Alamat Pengiriman</label>
+                <textarea id="cust-address" class="form-control form-control-sm mb-2" placeholder="Alamat Lengkap"></textarea>
+                
+                <label class="form-label small fw-bold">Metode Pembayaran</label>
+                <select id="payment-method" class="form-select form-select-sm mb-3">
+                    <option value="Transfer Bank (BCA/Mandiri)">Transfer Bank</option>
+                    <option value="E-Wallet (Dana/Gopay)">E-Wallet (Dana/Gopay)</option>
+                    <option value="COD (Bayar di Tempat)">COD (Bayar di Tempat)</option>
+                </select>
+            </div>
+
+            <div class="d-flex justify-content-between fw-bold fs-5 mb-4">
+                <span>Total:</span>
+                <span class="text-danger">Rp <span id="total-price">0</span></span>
+            </div>
+
+            <div class="d-grid gap-2">
+                <button class="btn btn-success" onclick="checkoutWA()">
+                    <i class="fab fa-whatsapp"></i> Kirim Pesanan
+                </button>
+                <button class="btn btn-link btn-sm text-muted" onclick="clearCart()">Kosongkan Keranjang</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">SISMA Badminton</h5>
+                    <p>Penyedia perlengkapan badminton original dan terlengkap untuk mendukung performa atlet juara.</p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Jam Operasional</h5>
+                    <p><i class="fas fa-clock me-2"></i> Senin - Sabtu:<br> 09.00 - 20.00 WIB</p>
+                    <p><i class="fas fa-calendar-times me-2"></i> Minggu: Libur</p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Kontak Kami</h5>
+                    <p><i class="fas fa-home me-2"></i> Malang, Jawa Timur</p>
+                    <p><i class="fas fa-envelope me-2"></i> support@sismabadminton.com</p>
+                    <p><i class="fas fa-phone me-2"></i> +62 812 3456 7890</p>
+                </div>
+            </div>
+
+            <hr class="mb-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-start">© 2026 <strong>SISMA Badminton</strong>. Dibuat dengan <i class="fas fa-heart text-danger"></i> untuk Ujian Praktek XI TIK</p>
+                </div>
+                <div class="col-md-5 col-lg-4 text-center text-md-end">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item"><a href="#" class="text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white" style="font-size: 23px;"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof updateUI === "function") updateUI();
+        });
+    </script>
+</body>
+</html>
